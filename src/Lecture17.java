@@ -1,3 +1,6 @@
+// London Paris
+// IT-CS-142-Lecture-17
+
 public class Lecture17 {
 
     public static void main(String[] args) {
@@ -7,10 +10,44 @@ public class Lecture17 {
         // Note: you will need to put some of your answers inside a comments
 
         // Put your answer for #10 here:
+        // Vehicle v = new Car();
+        // Vehicle V = new SUV();
+        // Car c = new SUV();
+        // SUV s = new SUV();
 
         // Put your answer for #12 here:
+        // flute
+        // shoe 1
+        // flute 2
+        //
+        // flute
+        // blue 1
+        // flute 2
+        //
+        // moo
+        // moo 1
+        // moo 2
+        //
+        // moo
+        // blue 1
+        // moo 2
 
         // Put your answer for #13 here:
+        // moo 2
+        // blue 1
+        // moo
+        //
+        // moo 2
+        // moo 1
+        // moo
+        //
+        // flute 2
+        // shoe 1
+        // flute
+        //
+        // flute 2
+        // blue 1
+        // flute
 
         // Put your answer for #18 here:
 
