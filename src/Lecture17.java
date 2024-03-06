@@ -50,10 +50,18 @@ public class Lecture17 {
         // flute
 
         // Put your answer for #18 here:
+        // is-a refers to inheritance, for example, a car is a vehicle
+        // has-a refers to functionality and fields without inheritance, for example,
+        // if the Person class has a List<address> field containing the addresses associated
+        // with a person.
 
         // Put your answer for #19 here:
+        // The Liskov Substitution Principle states that the objects of a superclass should be replaceable
+        // by the objects of a subclass without negatively affecting the program. So not exactly.
 
         // Put your answer for #20 here:
+        // No, this is a bad design because it creates a large number of unnecessary subclasses.
+        // A better design would be to have a Card class that has attributes to represent suit and rank.
 
         // EXERCISES:
 
