@@ -76,8 +76,15 @@ public class Lecture17 {
         // Put your answer for #5
         // I.e., create a Ticket object, try calling the methods and printing out the
         // results, etc, etc
+        Ticket wt = new WalkupTicket();
+        Ticket at = new AdvanceTicket();
+
+        System.out.println("Walk-up ticket price: $" + wt.getPrice());
+        System.out.println("Advance ticket price: $" + at.getPrice());
+
 
         // Put your answer for #6
+        //
 
         // Put your answer for #7
 
@@ -89,9 +96,41 @@ public class Lecture17 {
 
 // Put your class definitions here
 // NOTE: Do NOT mark them public
+class Ticket {
+    private int number;
+    private double price;
+    public Ticket(int number) {
+        this.price = price;
+    }
 
-class Ticket { // Note that there's no 'public'!
+    public Ticket() {
+    }
 
-    // definition goes here
+    public double getPrice() {
+        price = 50.0;
+        return price;
+    }
+
+    public String toString() {
+        return "Number: " + this.number + ", " + "Price: " + this.price + ".";
+    }
+
+}
+
+class WalkupTicket extends Ticket {
+
+
+}
+
+class AdvanceTicket extends Ticket {
+
+    @Override
+    public double getPrice() {
+        return super.getPrice() - 20.0;
+    }
+
+}
+
+class StudentAdvanceTicket extends AdvanceTicket {
 
 }
