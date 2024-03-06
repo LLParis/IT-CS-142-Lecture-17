@@ -95,8 +95,14 @@ public class Lecture17 {
         System.out.println("Student advance ticket: $" + sat.getPrice());
 
         // Put your answer for #14
+        Rectangle r1 = new Rectangle(3, 5);
+        Rectangle r2 = new Rectangle(3, 5);
+        Circle c1 = new Circle(3);
+        Circle c2 = new Circle(3);
         Triangle t1 = new Triangle(3, 5);
         Triangle t2 = new Triangle(3, 5);
+        System.out.println(r1.equals(r2));
+        System.out.println(c1.equals(c2));
         System.out.println(t1.equals(t2));
     }
 }
