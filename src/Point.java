@@ -58,7 +58,7 @@ public class Point {
   // Used with Java graphics:
   // Draws the given point on the DrawingPanel.
 public void draw(Graphics g) {
-g.fillOval(x, y, 3, 3);
-g.drawString("(" + x + ", " + y + ")", x, y);
-}
+  g.fillOval(x, y, 3, 3);
+  g.drawString("(" + x + ", " + y + ")", x, y);
+  }
 }

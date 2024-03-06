@@ -76,61 +76,84 @@ public class Lecture17 {
         // Put your answer for #5
         // I.e., create a Ticket object, try calling the methods and printing out the
         // results, etc, etc
-        Ticket wt = new WalkupTicket();
-        Ticket at = new AdvanceTicket();
+        Ticket wt = new WalkupTicket(1);
+        Ticket at = new AdvanceTicket(2, 9);
+        Ticket sat = new StudentAdvanceTicket(3,9);
 
-        System.out.println("Walk-up ticket price: $" + wt.getPrice());
-        System.out.println("Advance ticket price: $" + at.getPrice());
-
+        System.out.println("Walkup:" + wt.toString());
+        System.out.println("Advance:" + at.toString());
+        System.out.println("StudentAdvance:" + sat.toString());
+        System.out.println();
 
         // Put your answer for #6
-        //
+        System.out.println("Walk-up ticket price: $" + wt.getPrice());
 
         // Put your answer for #7
+        System.out.println("Advance ticket price: $" + at.getPrice());
 
         // Put your answer for #8
+        System.out.println("Student advance ticket: $" + sat.getPrice());
 
         // Put your answer for #14
+        Triangle t1 = new Triangle(3, 5);
+        Triangle t2 = new Triangle(3, 5);
+        System.out.println(t1.equals(t2));
     }
 }
 
 // Put your class definitions here
 // NOTE: Do NOT mark them public
-class Ticket {
+ class Ticket {
     private int number;
-    private double price;
+
     public Ticket(int number) {
-        this.price = price;
+        this.number = number;
     }
 
-    public Ticket() {
-    }
 
     public double getPrice() {
-        price = 50.0;
-        return price;
+        return 50.0;
     }
 
     public String toString() {
-        return "Number: " + this.number + ", " + "Price: " + this.price + ".";
+        return "Number: " + this.number + ", " + "Price: " + getPrice() + ".";
     }
 
 }
 
 class WalkupTicket extends Ticket {
+    public WalkupTicket(int number) {
+        super(number);
 
-
+    }
 }
 
 class AdvanceTicket extends Ticket {
+    private int daysBeforeEvent;
+    private final double DISCOUNT = 20;
+
+    public AdvanceTicket(int number, int daysBeforeEvent) {
+        super(number);
+        this.daysBeforeEvent = daysBeforeEvent;
+    }
 
     @Override
     public double getPrice() {
-        return super.getPrice() - 20.0;
+        if (daysBeforeEvent >= 10) {
+            return 30.0;
+        } else {
+            return 40.0;
+        }
     }
-
 }
 
 class StudentAdvanceTicket extends AdvanceTicket {
+    public StudentAdvanceTicket(int number, int daysBeforeEvent) {
+        super(number, daysBeforeEvent);
+    }
 
+    @Override
+    public double getPrice() {
+        return super.getPrice() / 2;
+    }
 }

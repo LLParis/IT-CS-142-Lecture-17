@@ -1,3 +1,6 @@
+// London Paris
+// IT-CS-142-Lecture-17
+
 // Each BankAccount object represents one user's account
 // information including name and balance of money.
 public class BankAccount {
